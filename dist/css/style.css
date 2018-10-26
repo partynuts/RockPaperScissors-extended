@@ -1,0 +1,308 @@
+body {
+    font-family: "Gloria Hallelujah", cursive;
+    margin: 0;
+    height: 100vh;
+    color: white;
+    background: #959595; /* Old browsers */
+    background: -moz-linear-gradient(top, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); 
+    background: linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.startScreen {
+    max-height: 80vh;
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+}
+
+button {
+    font-size: 1.3em;
+    font-weight: 900;
+    border-radius: 3vw;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    max-height: 50vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+.modeBtn {
+    height: 10vh;
+    width: 22vw;
+    background-color: yellow;
+    font-weight: 900;
+}
+
+.modeBtn:hover {
+    background-color: gold;
+}
+
+.playerSelectionBox {
+    position: relative;
+    top: 5vh;
+}
+
+.err {
+    color: red;
+}
+
+.playerInputBox {
+    display: flex;
+    justify-content: space-between;
+    width: 44vw;
+    margin-bottom: 5vh;
+}
+
+.plSelectionLabel {
+    font-size: 1.3em;
+}
+
+input {
+    width: 25vw;
+    height: 5vh;
+    font-size: 1.5em;
+    border-radius: 3vw;
+}
+
+.playerBtnBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+}
+
+.playerBtn {
+    width: 15vw;
+    height: 10vh;
+    background-color: turquoise;
+    font-weight: 700;
+}
+
+.playerBtn:hover {
+    background-color: #199a8d;
+    color: white;
+}
+
+.submitBtn {
+    width: 100%;
+    height: 7vh;
+    background-color: yellowgreen;
+}
+
+.submitBtn:hover {
+    color: white;
+    font-size: 1.5em;
+    background-color: #33cc33;
+}
+
+
+/* Weapon Choice SCreen */
+
+.weaponChoicePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.scoreNameBox {
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.score {
+    padding: 0 3vw;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.weaponChoice {
+    position: absolute;
+    top: 15vh;
+    width: 100vw;
+}
+
+/* game field */
+
+.gameFieldBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+}
+
+.weaponChoiceAnnouncement {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3em;
+}
+
+.weaponChoiceBtns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.weaponChoiceBtns button {
+    width: 10vw;
+    height: 5vh;
+    background-color: springgreen;
+}
+
+.weaponChoiceBtns button:hover {
+    transform: scale(1.5);
+    font-size: 1.2em;
+}
+
+/* battlefield */
+
+.battleImages {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.weaponImg{
+    height: 40vh;
+}
+
+.weaponImg.pl1 img {
+    transform: scaleX(-1);
+}
+
+.weaponImg img {
+    max-width: 100%;
+    height: 100%;
+}
+
+
+/* footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 3vw;
+}
+
+.footer button{
+    background-color: coral;
+    height: 5vh;
+    width: 10vw;
+}
+
+.highScoresOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255, 0.9);
+    z-index: 2;
+}
+
+.highScoresContentBox {
+    font-size: 1.5em;
+    width: 50vw;
+    height: 90vh;
+    overflow-y: scroll;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 1vw;
+}
+
+.highscoreTitle {
+    text-shadow: #FC0 1px 0 10px;
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.highscoreTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.highscoreTable .score {
+    width: 40%;
+}
+
+.highscoreTableContent {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2vw;
+}
+
+.highscoreTableContent ol {
+    width: 90%;
+    margin-left: 0.6em;
+}
+
+.highscoreList {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/*
+.infoModalContent,
+#rules {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 0 2vw;
+    border: 1px solid #888;
+    width: 75vw;
+    border-radius: 1vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    -webkit-animation-name: slidedown;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slidedown;
+    animation-duration: 0.4s;
+}
+
+
+@keyframes slidedown {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width: 540px) and (max-width: 1130px) {
+   
+}
+
+@media screen and (min-width: 480px) and (max-width: 540px) {
+    
+}
+
+@media screen and (max-width: 480px) {
+   
+} */
