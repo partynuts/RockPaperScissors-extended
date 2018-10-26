@@ -7,7 +7,7 @@ module.exports = {
     },
     mode: "development",
     devServer: {
-        contentBase: "./dist"
+        contentBase: "./docs"
     },
     module: {
         rules: [
