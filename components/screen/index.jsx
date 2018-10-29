@@ -14,7 +14,7 @@ export const initialState = {
     mode: undefined,
     message: "Please choose a player mode.",
     result: undefined,
-    highscoreData: {}
+    highscoreData: {},
 }
 
 export default class Screen extends React.Component {

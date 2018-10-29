@@ -11,19 +11,16 @@ export default function (props) {
             return (
                 <div className="gameFieldBox">
                     <BattlefieldImgs pl1_weapon={props.pl1_weapon} pl2_weapon={props.pl2_weapon} />
-                    <WeaponChoices pl1_name={props.pl1_name} pl2_name={props.pl2_name} pl1_weapon={props.pl1_weapon} pl2_weapon={props.pl2_weapon} />
-                    <div className="weaponChoiceBtns">
-                        <button onClick={() => props.chooseWeapon(weapons.ROCK)}>Rock</button>
-                        <button onClick={() => props.chooseWeapon(weapons.PAPER)}>Paper</button>
-                        <button onClick={() => props.chooseWeapon(weapons.SCISSORS)}>Scissors</button>
-                    </div>
+                    {/* <WeaponChoices pl1_name={props.pl1_name} pl2_name={props.pl2_name} pl1_weapon={props.pl1_weapon} pl2_weapon={props.pl2_weapon} /> */}
+                    <ImageButton chooseWeapon={props.chooseWeapon} />
                 </div>
             );
         case modes.PC_PC:
             return (
                 <div className="gameFieldBox">
-                    <BattlefieldImgs pl1_weapon={props.pl1_weapon} pl2_weapon={props.pl2_weapon} />
-                    <WeaponChoices pl1_name={props.pl1_name} pl2_name={props.pl2_name} pl1_weapon={props.pl1_weapon} pl2_weapon={props.pl2_weapon} />
+                    <BattlefieldImgs pl1_weapon={props.pl1_animatedWeapon || props.pl1_weapon} pl2_weapon={props.pl2_weapon} />
+                   
+                    {/* <WeaponChoices pl1_name={props.pl1_name} pl2_name={props.pl2_name} pl1_weapon={props.pl1_weapon} pl2_weapon={props.pl2_weapon} /> */}
                     <div className="weaponChoiceBtns">
                         <button onClick={() => props.chooseWeapon()}>Start!</button>
                     </div>
@@ -33,12 +30,8 @@ export default function (props) {
             return (
                 <div className="gameFieldBox">
                     <BattlefieldImgs pl1_weapon={props.pl1_weapon} pl2_weapon={props.pl2_weapon} />
-                    <WeaponChoices pl1_name={props.pl1_name} pl2_name={props.pl2_name} pl1_weapon={props.pl1_weapon} pl2_weapon={props.pl2_weapon} />
-                    <div className="weaponChoiceBtns">
-                        <button onClick={() => props.chooseWeapon(weapons.ROCK)}>Rock</button>
-                        <button onClick={() => props.chooseWeapon(weapons.PAPER)}>Paper</button>
-                        <button onClick={() => props.chooseWeapon(weapons.SCISSORS)}>Scissors</button>
-                    </div>
+                    {/* <WeaponChoices pl1_name={props.pl1_name} pl2_name={props.pl2_name} pl1_weapon={props.pl1_weapon} pl2_weapon={props.pl2_weapon} /> */}
+                    <ImageButton chooseWeapon={props.chooseWeapon} />
                 </div>
             )
     }

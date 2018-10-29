@@ -23,6 +23,8 @@ export default function (props) {
         props.updateState({
             pl1_score: initialState.pl1_score,
             pl2_score: initialState.pl2_score,
+            pl1_weapon: initialState.pl1_weapon,
+            pl2_weapon: initialState.pl2_weapon,
             message: "Choose a weapon!"
         })
     }
@@ -80,14 +82,14 @@ export default function (props) {
     function animateImgs(weapon, prop) {
         let prevWeapon;
 
-        function getRandomImage(pl_randomImg) {
+        function getRandomImage() {
             prevWeapon = genWeapon(prevWeapon)
             props.updateState({
                 [prop]: prevWeapon
             })
         }
-        for (let counter = 0; counter < 12; counter++) {
-            const callback = counter < 11 ? getRandomImage : () => {
+        for (let counter = 0; counter < 10; counter++) {
+            const callback = counter < 9 ? getRandomImage : () => {
                 props.updateState({
                     [prop]: weapon
                 })
